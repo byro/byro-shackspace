@@ -22,11 +22,27 @@ def _import_sepa(member_data, member):
     member.profile_sepa.save()
 
 
-def _import_transactions(member_data, member):
-    real_transactions = member_data.get('bank_transactions')
-    virtual_transactions = member_data.get('account_transactions')
+def _get_main_accounts():
+    fee_account, _ = Account.objects.get_or_create(
+        account_category=AccountCategory.MEMBER_FEES,
+    )
+    donation_account, _ = Account.objects.get_or_create(
+        account_category=AccountCategory.MEMBER_DONATION,
+    )
+    liability_account, _ = Account.objects.get_or_create(
+        account_category=AccountCategory.LIABILITY,
+    )
 
+    return (
+        fee_account,
+        donation_account,
+        liability_account,
+    )
+
+
+def _import_real_transactions(real_transactions):
     transactions = []
+
     for real_transaction in real_transactions:
         transactions.append(RealTransaction(
             channel=TransactionChannel.BANK,
@@ -38,23 +54,17 @@ def _import_transactions(member_data, member):
             importer='shackbureau',
         ))
 
-    real_ids = [rt.pk for rt in RealTransaction.objects.bulk_create(transactions)]
-    member.refresh_from_db()
+    ids = [rt.pk for rt in RealTransaction.objects.bulk_create(transactions)]
+    return RealTransaction.objects.filter(pk__in=ids)
+
+
+def _import_fee_claims(member, virtual_transactions):
+    fee_account, donation_account, liability_account = _get_main_accounts()
 
     claims = [v for v in virtual_transactions if v['booking_type'] == 'fee_claim']
-    inflows = [v for v in virtual_transactions if v['booking_type'] == 'deposit']
-
-    fee_account, _ = Account.objects.get_or_create(
-        account_category=AccountCategory.MEMBER_FEES,
-    )
-    donation_account, _ = Account.objects.get_or_create(
-        account_category=AccountCategory.MEMBER_DONATION,
-    )
-    liability_account, _ = Account.objects.get_or_create(
-        account_category=AccountCategory.LIABILITY,
-    )
 
     transactions = []
+
     for claim in claims:
         transactions.append(VirtualTransaction(
             source_account=fee_account,
@@ -63,23 +73,19 @@ def _import_transactions(member_data, member):
             amount=abs(Decimal(claim['amount'])),
             value_datetime=claim['due_date'],
         ))
+
     VirtualTransaction.objects.bulk_create(transactions)
 
-    qs = RealTransaction.objects.filter(pk__in=real_ids)
+
+def _import_inflows(member, virtual_transactions, real_transactions):
+    fee_account, donation_account, liability_account = _get_main_accounts()
+
+    inflows = [v for v in virtual_transactions if v['booking_type'] == 'deposit']
+
     for inflow in inflows:
         account = fee_account if inflow['transaction_type'] == 'membership fee' else donation_account
-        """
-          {
-            "amount": "-20.00",
-            "booking_date": "2016-06-04",
-            "payment_reference": "Mitgliedsbeitragsforderung 10/2014 ID -1",
-            "transaction_type": "membership fee",
-            "booking_type": "fee_claim",
-            "due_date": "2014-10-01"
-          },
-        """
         try:
-            real_transaction = qs.get(
+            real_transaction = real_transactions.get(
                 virtual_transactions__isnull=True,
                 amount=abs(Decimal(inflow['amount'])),
                 value_datetime=inflow['due_date'],
@@ -96,7 +102,17 @@ def _import_transactions(member_data, member):
             value_datetime=inflow['due_date'],
             real_transaction=real_transaction,
         )
-        
+
+
+def _import_transactions(member_data, member):
+    real_transactions = member_data.get('bank_transactions')
+    virtual_transactions = member_data.get('account_transactions')
+
+    real_transactions = _import_real_transactions(real_transactions)
+
+    _import_fee_claims(member, virtual_transactions)
+    _import_inflows(member, virtual_transactions, real_transactions)
+
 
 def import_member(member_data):
     member = Member.objects.create(
