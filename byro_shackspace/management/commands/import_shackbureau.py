@@ -146,6 +146,11 @@ def import_member(member_data):
     _import_transactions(member_data, member)
     
 
+def import_members(data):
+    for member in data:
+        import_member(member)
+
+
 class Command(BaseCommand):
     help = 'Imports a frab xml export'
 
@@ -158,5 +163,4 @@ class Command(BaseCommand):
         with open(path) as export:
             data = json.load(export)
 
-        for member in data:
-            import_member(member)
+        import_members(data)
