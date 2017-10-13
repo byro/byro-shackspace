@@ -1,12 +1,38 @@
 [
   {
     "number": "-1",
+    "name": "Max Mustermann",
+    "address": "Max Mustermann\nMusterstrasse 1\n70000 Berlin",
+    "email": "max@example.org",
+    "join_date": "2014-09-01",
+    "leave_date": "",
+    "payment_type": "transfer",
+
     "sepa__iban": null,
     "sepa__mandate_reason": "shack e.V. Mitgliedsbeitrag ID -1",
     "sepa__zip_code": null,
     "sepa__country": "Deutschland",
     "sepa__city": null,
     "sepa__bic": null,
+    "sepa__address": null,
+    "sepa__fullname": null,
+    "sepa__issue_date": null,
+    "sepa__institute": null,
+    "sepa__mandate_reference": "SHACKEVBEITRAGID-1",
+
+    "profile__birth_date": "",
+    "profile__nick": "max",
+    "profile__phone_number": "",
+
+    "memberships": [
+      {
+        "membership_start": "2014-09-01",
+        "membership_fee_monthly": "20.00",
+        "membership_type": "full",
+        "membership_fee_interval": 1
+      }
+    ],
+
     "bank_transactions": [
       {
         "amount": "40.00",
@@ -226,15 +252,6 @@
         "debitor_id": "None"
       }
     ],
-    "profile__birth_date": "",
-    "sepa__address": null,
-    "sepa__issue_date": null,
-    "address": "Max Mustermann\nMusterstrasse 1\n70000 Berlin",
-    "sepa__institute": null,
-    "leave_date": "",
-    "payment_type": "transfer",
-    "profile__nick": "max",
-    "sepa__mandate_reference": "SHACKEVBEITRAGID-1",
     "account_transactions": [
       {
         "amount": "-20.00",
@@ -900,11 +917,6 @@
         "booking_type": "fee_claim",
         "due_date": "2014-09-01"
       }
-    ],
-    "email": "max@example.org",
-    "name": "Max Mustermann",
-    "sepa__fullname": null,
-    "join_date": "2014-09-01",
-    "profile__phone_number": ""
+    ]
   }
 ]
