@@ -152,7 +152,7 @@ def import_members(data):
 
 
 class Command(BaseCommand):
-    help = 'Imports a frab xml export'
+    help = 'Imports a shackbureau json export'
 
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
