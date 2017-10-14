@@ -149,6 +149,7 @@ def import_member(member_data):
 
     if member_data['leave_date']:
         last.end = parse_date(member_data['leave_date'])
+        last.save(update_fields=['end'])
 
     if member_data['payment_type'].lower() == 'sepa':
         _import_sepa(member_data, member)
