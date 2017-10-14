@@ -1,6 +1,5 @@
 import json
-from contextlib import suppress
-from datetime import datetime, timedelta, time
+from datetime import datetime, time, timedelta
 from decimal import Decimal
 
 import pytz
@@ -8,7 +7,10 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 from django.utils.dateparse import parse_date
 
-from byro.bookkeeping.models import TransactionChannel, RealTransaction, VirtualTransaction, Account, AccountCategory
+from byro.bookkeeping.models import (
+    Account, AccountCategory, RealTransaction,
+    TransactionChannel, VirtualTransaction,
+)
 from byro.members.models import Member, Membership
 
 TIMEZONE = pytz.timezone('Europe/Berlin')
