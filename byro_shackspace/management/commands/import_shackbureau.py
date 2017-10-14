@@ -148,7 +148,7 @@ def import_member(member_data):
         last = obj
 
     if member_data['leave_date']:
-        last.end = parse_date(membership['leave_date'])
+        last.end = parse_date(member_data['leave_date'])
 
     if member_data['payment_type'].lower() == 'sepa':
         _import_sepa(member_data, member)
