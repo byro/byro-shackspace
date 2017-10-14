@@ -98,22 +98,22 @@ def _import_inflows(member, virtual_transactions, real_transactions):
             value_datetime=localize(parse_date(inflow['due_date'])),
             purpose=inflow['payment_reference'],
         )
-        if not possible_real_transaction.exists():
-            real_transaction = None
-        elif possible_real_transaction.count() == 1:
-            real_transaction = possible_real_transaction.first()
-        else:
-            real_transaction = possible_real_transaction.first()
-            print(f'Found more than one transactions matching our query: {possible_real_transaction.values_list("pk", flat=True)}')
 
-        VirtualTransaction.objects.create(
-            destination_account=account,
-            source_account=liability_account,
-            member=member,
-            amount=abs(Decimal(inflow['amount'])),
-            value_datetime=localize(parse_date(inflow['due_date'])),
-            real_transaction=real_transaction,
-        )
+        if possible_real_transaction.count() == 1:
+            real_transaction = possible_real_transaction.first()
+
+            VirtualTransaction.objects.create(
+                destination_account=account,
+                source_account=liability_account,
+                member=member,
+                amount=abs(Decimal(inflow['amount'])),
+                value_datetime=localize(parse_date(inflow['due_date'])),
+                real_transaction=real_transaction,
+            )
+        elif possible_real_transaction.count() == 0:
+            print(f'Found no transaction matching our query: {inflow}')
+        elif possible_real_transaction.count() > 1:
+            print(f'Found more than one transactions matching our query: {possible_real_transaction.values_list("pk", flat=True)}')
 
 
 def _import_transactions(member_data, member):
