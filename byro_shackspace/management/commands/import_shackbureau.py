@@ -1,14 +1,22 @@
 import json
 from contextlib import suppress
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 from decimal import Decimal
 
+import pytz
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from django.utils.dateparse import parse_date
 
 from byro.bookkeeping.models import TransactionChannel, RealTransaction, VirtualTransaction, Account, AccountCategory
 from byro.members.models import Member, Membership
+
+TIMEZONE = pytz.timezone('Europe/Berlin')
+
+
+def localize(date):
+    if date:
+        return TIMEZONE.localize(datetime.combine(date, time.min))
 
 
 def _import_sepa(member_data, member):
@@ -46,7 +54,7 @@ def _import_real_transactions(real_transactions):
     for real_transaction in real_transactions:
         transactions.append(RealTransaction(
             channel=TransactionChannel.BANK,
-            value_datetime=parse_date(real_transaction['booking_date']),
+            value_datetime=localize(parse_date(real_transaction['booking_date'] or real_transaction['due_date'])),
             amount=real_transaction['amount'],
             purpose=real_transaction['reference'],
             originator=real_transaction.get('transaction_owner') or 'imported',
@@ -71,7 +79,7 @@ def _import_fee_claims(member, virtual_transactions):
             destination_account=liability_account,
             member=member,
             amount=abs(Decimal(claim['amount'])),
-            value_datetime=claim['due_date'],
+            value_datetime=localize(parse_date(claim['due_date'])),
         ))
 
     VirtualTransaction.objects.bulk_create(transactions)
@@ -84,22 +92,26 @@ def _import_inflows(member, virtual_transactions, real_transactions):
 
     for inflow in inflows:
         account = fee_account if inflow['transaction_type'] == 'membership fee' else donation_account
-        try:
-            real_transaction = real_transactions.get(
-                virtual_transactions__isnull=True,
-                amount=abs(Decimal(inflow['amount'])),
-                value_datetime=inflow['due_date'],
-                purpose=inflow['payment_reference'],
-            )
-        except RealTransaction.DoesNotExist:
+        possible_real_transaction = real_transactions.filter(
+            virtual_transactions__isnull=True,
+            amount=abs(Decimal(inflow['amount'])),
+            value_datetime=localize(parse_date(inflow['due_date'])),
+            purpose=inflow['payment_reference'],
+        )
+        if not possible_real_transaction.exists():
             real_transaction = None
+        elif possible_real_transaction.count() == 1:
+            real_transaction = possible_real_transaction.first()
+        else:
+            real_transaction = possible_real_transaction.first()
+            print(f'Found more than one transactions matching our query: {possible_real_transaction.values_list("pk", flat=True)}')
 
         VirtualTransaction.objects.create(
             destination_account=account,
             source_account=liability_account,
             member=member,
             amount=abs(Decimal(inflow['amount'])),
-            value_datetime=inflow['due_date'],
+            value_datetime=localize(parse_date(inflow['due_date'])),
             real_transaction=real_transaction,
         )
 
