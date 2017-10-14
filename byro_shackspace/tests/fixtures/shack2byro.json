@@ -1,922 +1,936 @@
-[
-  {
-    "number": "-1",
-    "name": "Max Mustermann",
-    "address": "Max Mustermann\nMusterstrasse 1\n70000 Berlin",
-    "email": "max@example.org",
-    "join_date": "2014-09-01",
-    "leave_date": "",
-    "payment_type": "transfer",
-
-    "sepa__iban": null,
-    "sepa__mandate_reason": "shack e.V. Mitgliedsbeitrag ID -1",
-    "sepa__zip_code": null,
-    "sepa__country": "Deutschland",
-    "sepa__city": null,
-    "sepa__bic": null,
-    "sepa__address": null,
-    "sepa__fullname": null,
-    "sepa__issue_date": null,
-    "sepa__institute": null,
-    "sepa__mandate_reference": "SHACKEVBEITRAGID-1",
-
-    "profile__birth_date": "",
-    "profile__nick": "max",
-    "profile__phone_number": "",
-
-    "memberships": [
-      {
-        "membership_start": "2014-09-01",
-        "membership_fee_monthly": "20.00",
-        "membership_type": "full",
-        "membership_fee_interval": 1
-      }
-    ],
-
-    "bank_transactions": [
-      {
-        "amount": "40.00",
-        "booking_date": "2014-10-13",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2014-10-27",
-        "reference": "Muustermann",
-        "transaction_owner": "",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2014-11-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2014-12-29",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-01-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-02-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-03-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-04-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-05-26",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-06-29",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-07-23",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-08-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-09-28",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-10-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-11-27",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2015-12-28",
-        "reference": "Mustermann",
-        "transaction_owner": null,
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-01-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-02-29",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-03-29",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-04-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-05-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-07-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-08-29",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-09-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-11-28",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-10-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-02-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-01-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-03-27",
-        "reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_owner": "Max Mustermann",
-        "debitor_id": "None"
-      }
-    ],
-    "account_transactions": [
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 12/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-12-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 11/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-11-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 10/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-10-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 9/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-09-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 8/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-08-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 7/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-07-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 6/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-06-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 5/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-05-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 4/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-04-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 3/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-03-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 2/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-02-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 1/2018 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2018-01-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 12/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-12-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 11/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-11-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 10/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-10-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 9/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-09-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 8/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-08-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 7/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-07-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 6/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-06-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 5/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-05-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 4/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-04-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-04-18",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2017-03-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 3/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-03-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-03-07",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2017-02-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 2/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-02-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-03-07",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2017-01-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 1/2017 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2017-01-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-12-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 12/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-12-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-15",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-11-28"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 11/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-11-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-10-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2017-01-25",
-        "payment_reference": "Mitgliedsbeitragsforderung 10/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-10-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-15",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-09-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 9/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-09-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-15",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-08-29"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 8/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-08-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-15",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-07-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 7/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-07-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-12-15",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-06-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 6/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-06-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-26",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-05-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 5/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-05-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-26",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-04-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 4/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-04-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-26",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-03-29"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 3/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-03-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-26",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-02-29"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 2/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-02-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-26",
-        "payment_reference": "Mitgliedsbeitrag ID -1              ",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2016-01-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 1/2016 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2016-01-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-12-28"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 12/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-12-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-11-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 11/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-11-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-10-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 10/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-10-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-09-28"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 9/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-09-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-08-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 8/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-08-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-07-23"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 7/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-07-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-06-29"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 6/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-06-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-05-26"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 5/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-05-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-04-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 4/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-04-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-03-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 3/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-03-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-02-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 2/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-02-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-12",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2015-01-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 1/2015 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2015-01-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2014-12-29"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 12/2014 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2014-12-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2014-11-27"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 11/2014 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2014-11-01"
-      },
-      {
-        "amount": "20.00",
-        "booking_date": "2014-10-27",
-        "payment_reference": "Mustermann\nNone",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2014-10-27"
-      },
-      {
-        "amount": "40.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mustermann",
-        "transaction_type": "membership fee",
-        "booking_type": "deposit",
-        "due_date": "2014-10-13"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 10/2014 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2014-10-01"
-      },
-      {
-        "amount": "-20.00",
-        "booking_date": "2016-06-04",
-        "payment_reference": "Mitgliedsbeitragsforderung 9/2014 ID -1",
-        "transaction_type": "membership fee",
-        "booking_type": "fee_claim",
-        "due_date": "2014-09-01"
-      }
-    ]
-  }
-]
+{
+  "members": [
+    {
+      "number": "-1",
+      "name": "Max Mustermann",
+      "address": "Max Mustermann\nMusterstrasse 1\n70000 Berlin",
+      "email": "max@example.org",
+      "join_date": "2014-09-01",
+      "leave_date": "",
+      "payment_type": "transfer",
+      "sepa__iban": null,
+      "sepa__mandate_reason": "shack e.V. Mitgliedsbeitrag ID -1",
+      "sepa__zip_code": null,
+      "sepa__country": "Deutschland",
+      "sepa__city": null,
+      "sepa__bic": null,
+      "sepa__address": null,
+      "sepa__fullname": null,
+      "sepa__issue_date": null,
+      "sepa__institute": null,
+      "sepa__mandate_reference": "SHACKEVBEITRAGID-1",
+      "profile__birth_date": "",
+      "profile__nick": "max",
+      "profile__phone_number": "",
+      "memberships": [
+        {
+          "membership_start": "2014-09-01",
+          "membership_fee_monthly": "20.00",
+          "membership_type": "full",
+          "membership_fee_interval": 1
+        }
+      ],
+      "bank_transactions": [
+        {
+          "amount": "40.00",
+          "booking_date": "2014-10-13",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2014-10-27",
+          "reference": "Muustermann",
+          "transaction_owner": "",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2014-11-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2014-12-29",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-01-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-02-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-03-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-04-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-05-26",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-06-29",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-07-23",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-08-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-09-28",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-10-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-11-27",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2015-12-28",
+          "reference": "Mustermann",
+          "transaction_owner": null,
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-01-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-02-29",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-03-29",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-04-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-05-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-07-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-08-29",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-09-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-11-28",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-10-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-02-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-01-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-03-27",
+          "reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_owner": "Max Mustermann",
+          "debitor_id": "None"
+        }
+      ],
+      "account_transactions": [
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 12/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-12-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 11/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-11-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 10/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-10-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 9/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-09-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 8/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-08-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 7/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-07-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 6/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-06-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 5/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-05-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 4/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-04-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 3/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-03-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 2/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-02-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 1/2018 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2018-01-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 12/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-12-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 11/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-11-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 10/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-10-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 9/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-09-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 8/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-08-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 7/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-07-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 6/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-06-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 5/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-05-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 4/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-04-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-04-18",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2017-03-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 3/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-03-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-03-07",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2017-02-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 2/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-02-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-03-07",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2017-01-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 1/2017 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2017-01-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-12-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 12/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-12-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-15",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-11-28"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 11/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-11-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-10-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2017-01-25",
+          "payment_reference": "Mitgliedsbeitragsforderung 10/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-10-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-15",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-09-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 9/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-09-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-15",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-08-29"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 8/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-08-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-15",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-07-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 7/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-07-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-12-15",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-06-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 6/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-06-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-26",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-05-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 5/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-05-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-26",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-04-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 4/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-04-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-26",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-03-29"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 3/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-03-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-26",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-02-29"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 2/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-02-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-26",
+          "payment_reference": "Mitgliedsbeitrag ID -1              ",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2016-01-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 1/2016 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2016-01-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-12-28"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 12/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-12-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-11-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 11/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-11-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-10-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 10/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-10-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-09-28"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 9/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-09-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-08-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 8/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-08-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-07-23"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 7/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-07-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-06-29"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 6/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-06-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-05-26"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 5/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-05-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-04-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 4/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-04-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-03-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 3/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-03-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-02-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 2/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-02-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-12",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2015-01-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 1/2015 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2015-01-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2014-12-29"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 12/2014 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2014-12-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2014-11-27"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 11/2014 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2014-11-01"
+        },
+        {
+          "amount": "20.00",
+          "booking_date": "2014-10-27",
+          "payment_reference": "Mustermann\nNone",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2014-10-27"
+        },
+        {
+          "amount": "40.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mustermann",
+          "transaction_type": "membership fee",
+          "booking_type": "deposit",
+          "due_date": "2014-10-13"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 10/2014 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2014-10-01"
+        },
+        {
+          "amount": "-20.00",
+          "booking_date": "2016-06-04",
+          "payment_reference": "Mitgliedsbeitragsforderung 9/2014 ID -1",
+          "transaction_type": "membership fee",
+          "booking_type": "fee_claim",
+          "due_date": "2014-09-01"
+        }
+      ]
+    }
+  ],
+  "unresolved_bank_transactions": [
+    {
+      "amount": "-123.00",
+      "booking_date": "2017-06-01",
+      "debitor_id": "None",
+      "reference": "Miete + Betriebskostenabsch      Dauerauftrag:         11",
+      "transaction_owner": "Fritz Vermieter"
+    },
+    {
+      "amount": "10.00",
+      "booking_date": "2017-01-13",
+      "debitor_id": "None",
+      "reference": "Spende mustermann              ",
+      "transaction_owner": ""
+    }
+  ]
+}
