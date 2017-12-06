@@ -12,6 +12,7 @@ from byro.bookkeeping.models import (
     TransactionChannel, VirtualTransaction,
 )
 from byro.members.models import Member, Membership
+from byro_shackbureau.models import ShackProfile
 
 TIMEZONE = pytz.timezone('Europe/Berlin')
 
