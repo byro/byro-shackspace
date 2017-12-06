@@ -135,6 +135,18 @@ def import_member(member_data):
         address=member_data['address'],
         email=member_data['email'],
     )
+    profile = ShackProfile.objects.create(
+        member=member,
+        has_loeffelhardt_account = member_data.get('has_loeffelhardt_account', False),
+        has_matomat_key = member_data.get('has_matomat_key', False),
+        has_metro_card = member_data.get('has_metro_card', False),
+        has_selgros_card = member_data.get('has_selgros_card', False),
+        has_shack_iron_key = member_data.get('has_shack_iron_key', False),
+        has_snackomat_key = member_data.get('has_snackomat_key', False),
+        is_keyholder = member_data.get('is_keyholder', False),
+        signed_DSV = member_data.get('signed_DSV', False),
+        ssh_public_key = member_data.get('ssh_public_key', False),
+    )
     memberships = member_data.get('memberships')
     last = None
     for membership in sorted(memberships, key=lambda m: m['membership_start']):
