@@ -4,15 +4,17 @@ from datetime import date, datetime, timedelta
 from decimal import Decimal
 
 from django.db import transaction
+from django.dispatch import receiver
 from django.utils.timezone import now
 
 from byro.bookkeeping.models import RealTransaction, TransactionChannel
+from byro.bookkeeping.signals import derive_virtual_transactions
 from byro.members.models import Member
 
 
 @transaction.atomic
-def process_bank_csv(self, source):
-    reader = csv.DictReader(source.source_file.name, encoding='iso-8859-1', delimiter=';', quotechar='"')
+def process_bank_csv(source):
+    reader = csv.DictReader(open(source.source_file.name, encoding='iso-8859-1'), delimiter=';', quotechar='"')
     booking_timestamp = now()
 
     for line in reader:
@@ -21,7 +23,7 @@ def process_bank_csv(self, source):
         reference = ''
         for key in line.keys():
             if key.startswith('VWZ'):
-                reference += d[key] + ' '
+                reference += line[key] + ' '
 
         RealTransaction.objects.create(
             channel=TransactionChannel.BANK,
@@ -29,7 +31,7 @@ def process_bank_csv(self, source):
             value_datetime=datetime.strptime(line.get('Buchungstag'), '%d.%m.%Y'),
             amount=Decimal(line.get('Betrag').replace('.', '').replace(',', '.')),
             purpose=reference,
-            originator=line.get('Auftraggeber/Empfänger'),
+            originator=line.get('Auftraggeber/Empfänger', '<leer>'),
             importer='shack_bank_csv_importer',
             source=source,
             data=line,
