@@ -3,6 +3,7 @@ from datetime import datetime, time, timedelta
 from decimal import Decimal
 
 import pytz
+from byro_shackspace.models import ShackProfile
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from django.utils.dateparse import parse_date
@@ -12,7 +13,6 @@ from byro.bookkeeping.models import (
     TransactionChannel, VirtualTransaction,
 )
 from byro.members.models import Member, Membership
-from byro_shackspace.models import ShackProfile
 
 TIMEZONE = pytz.timezone('Europe/Berlin')
 
