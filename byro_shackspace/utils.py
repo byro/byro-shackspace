@@ -38,15 +38,30 @@ def process_bank_csv(source):
         )
 
 
-def match_transaction(transaction):
+@receiver(derive_virtual_transactions)
+def match_transaction(transaction, signal, **kwargs):
     uid, score = reference_parser(transaction.reference)
     member = None
-    error = None
     try:
-        if uid:
-            member = Member.objects.get(member_id=uid)
+        member = Member.objects.get(number=uid)
     except Member.DoesNotExist:
-        error = "Member does not exist"
+        return
+
+    account = Account.objects.get(account_category=AccountCategory.MEMBER_FEES)
+    data = {
+        'amount': transaction.amount,
+        'destination': account,
+        'value_datetime': value_datetime,
+        'member': member,
+    }
+    virtual_transaction = VirtualTransaction.objects.filter(**data).first()
+    if virtual_transaction and virtual_transaction.real_transaction != transaction:
+        raise Exception(f'RealTransaction {transaction.id} cannot be matched! There is already a VirtualTransaction ({virtual_transaction.id}) that is too similar. It is matched to RealTransaction {virtual_transaction.real_transaction.id}.')
+    if not virtual_transaction:
+        data['real_transaction'] = transaction
+        virtual_transaction = VirtualTransaction.objects.create(**data)
+    return [virtual_transaction]
+
 
 def reference_parser(self, reference):
     reference = reference.lower()
@@ -70,10 +85,3 @@ def reference_parser(self, reference):
             return (int(hit.groupdict().get('ID')), score)
 
     return (False, 99)
-
-def get_debitor_by_record_token(self, reference):
-    reference = "".join(reference.lower().split())
-    for debitor in self.debitors:
-        if re.match(debitor['regex'], reference):
-            return Debitor.objects.get(pk=debitor['pk'])
-    return None
