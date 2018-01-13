@@ -52,10 +52,11 @@ def _get_main_accounts():
 
 
 def _import_real_transactions(real_transactions):
-    transactions = []
-
+    ids = []
     for real_transaction in real_transactions:
-        transactions.append(RealTransaction(
+        if parse_date(real_transaction['booking_date'] or real_transaction['due_date']).year != 2015:
+            continue
+        rt, _ = RealTransaction.objects.get_or_create(
             channel=TransactionChannel.BANK,
             value_datetime=localize(parse_date(real_transaction['booking_date'] or real_transaction['due_date'])),
             amount=real_transaction['amount'],
@@ -63,29 +64,10 @@ def _import_real_transactions(real_transactions):
             originator=real_transaction.get('transaction_owner') or 'imported',
             # TODO: reverses?
             importer='shackbureau',
-        ))
+        )
+        ids.append(rt.pk)
 
-    ids = [rt.pk for rt in RealTransaction.objects.bulk_create(transactions)]
     return RealTransaction.objects.filter(pk__in=ids)
-
-
-def _import_fee_claims(member, virtual_transactions):
-    fee_account, donation_account, liability_account = _get_main_accounts()
-
-    claims = [v for v in virtual_transactions if v['booking_type'] == 'fee_claim']
-
-    transactions = []
-
-    for claim in claims:
-        transactions.append(VirtualTransaction(
-            source_account=fee_account,
-            destination_account=liability_account,
-            member=member,
-            amount=abs(Decimal(claim['amount'])),
-            value_datetime=localize(parse_date(claim['due_date'])),
-        ))
-
-    VirtualTransaction.objects.bulk_create(transactions)
 
 
 def _import_inflows(member, virtual_transactions, real_transactions):
@@ -94,6 +76,9 @@ def _import_inflows(member, virtual_transactions, real_transactions):
     inflows = [v for v in virtual_transactions if v['booking_type'] == 'deposit']
 
     for inflow in inflows:
+        if parse_date(inflow['due_date']) is None  or parse_date(inflow['due_date']).year != 2015:
+            continue
+
         account = fee_account if inflow['transaction_type'] == 'membership fee' else donation_account
         possible_real_transaction = real_transactions.filter(
             virtual_transactions__isnull=True,
@@ -105,7 +90,7 @@ def _import_inflows(member, virtual_transactions, real_transactions):
         if possible_real_transaction.count() == 1:
             real_transaction = possible_real_transaction.first()
 
-            VirtualTransaction.objects.create(
+            VirtualTransaction.objects.get_or_create(
                 destination_account=account,
                 source_account=liability_account,
                 member=member,
@@ -125,7 +110,7 @@ def _import_transactions(member_data, member):
 
     real_transactions = _import_real_transactions(real_transactions)
 
-    _import_fee_claims(member, virtual_transactions)
+    # _import_fee_claims(member, virtual_transactions)
     _import_inflows(member, virtual_transactions, real_transactions)
 
 
@@ -180,7 +165,7 @@ def import_member(member_data):
         if value:
             setattr(member.profile_profile, key, value)
     member.profile_profile.save()
-    # _import_transactions(member_data, member)
+    _import_transactions(member_data, member)
 
 
 def import_members(data):
@@ -201,4 +186,4 @@ class Command(BaseCommand):
             data = json.load(export)
 
         import_members(data['members'])
-        # _import_real_transactions(data['unresolved_bank_transactions'])
+        _import_real_transactions(data['unresolved_bank_transactions'])
