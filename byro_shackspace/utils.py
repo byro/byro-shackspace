@@ -8,12 +8,14 @@ from django.dispatch import receiver
 from django.utils.timezone import now
 
 from byro.bookkeeping.models import RealTransaction, TransactionChannel
-from byro.bookkeeping.signals import derive_virtual_transactions
+from byro.bookkeeping.signals import derive_virtual_transactions, process_bank_csv
 from byro.members.models import Member
 
 
 @transaction.atomic
-def process_bank_csv(source):
+@receiver(process_bank_csv)
+def process_bank_csv(sender, signal, **kwargs):
+    source = sender
     reader = csv.DictReader(open(source.source_file.name, encoding='iso-8859-1'), delimiter=';', quotechar='"')
     booking_timestamp = now()
 
@@ -38,8 +40,10 @@ def process_bank_csv(source):
         )
 
 
+@transaction.atomic
 @receiver(derive_virtual_transactions)
-def match_transaction(transaction, signal, **kwargs):
+def match_transaction(sender, signal, **kwargs):
+    transaction = sender
     uid, score = reference_parser(transaction.reference)
     member = None
     try:
