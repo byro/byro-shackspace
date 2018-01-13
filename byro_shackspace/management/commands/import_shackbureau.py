@@ -175,6 +175,8 @@ def import_member(member_data):
 
     for key in ['birth_date', 'nick', 'phone_number']:
         value = member_data.get(f'profile__{key}')
+        if not value and key == 'birth_date':
+            value = '1970-1-1'
         if value:
             setattr(member.profile_profile, key, value)
     member.profile_profile.save()
