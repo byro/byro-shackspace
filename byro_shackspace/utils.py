@@ -37,8 +37,7 @@ def process_bank_csv(sender, signal, **kwargs):
             purpose=reference,
             originator=line.get('Auftraggeber/Empfänger', '<leer>'),
             importer='shack_bank_csv_importer',
-            data=line,
-            defaults={'source': source, 'booking_datetime': booking_timestamp},
+            defaults={'source': source, 'booking_datetime': booking_timestamp, 'data': line},
         )
     return True
 
