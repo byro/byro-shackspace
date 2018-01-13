@@ -143,6 +143,7 @@ def import_member(member_data):
             'has_loeffelhardt_account': member_data.get('has_loeffelhardt_account', False),
             'has_matomat_key': member_data.get('has_matomat_key', False),
             'has_metro_card': member_data.get('has_metro_card', False),
+            'has_safe_key': member_data.get('has_safe_key', False),
             'has_selgros_card': member_data.get('has_selgros_card', False),
             'has_shack_iron_key': member_data.get('has_shack_iron_key', False),
             'has_snackomat_key': member_data.get('has_snackomat_key', False),
