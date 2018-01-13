@@ -177,7 +177,7 @@ def import_member(member_data):
         if value:
             setattr(member.profile_profile, key, value)
     member.profile_profile.save()
-    _import_transactions(member_data, member)
+    # _import_transactions(member_data, member)
 
 
 def import_members(data):
