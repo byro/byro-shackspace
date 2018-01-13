@@ -92,7 +92,7 @@ def _import_inflows(member, virtual_transactions, real_transactions):
 
             VirtualTransaction.objects.get_or_create(
                 destination_account=account,
-                source_account=liability_account,
+                source_account=None,
                 member=member,
                 amount=abs(Decimal(inflow['amount'])),
                 value_datetime=localize(parse_date(inflow['due_date'])),
