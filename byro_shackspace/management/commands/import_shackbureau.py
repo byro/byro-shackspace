@@ -198,4 +198,4 @@ class Command(BaseCommand):
             data = json.load(export)
 
         import_members(data['members'])
-        _import_real_transactions(data['unresolved_bank_transactions'])
+        # _import_real_transactions(data['unresolved_bank_transactions'])
