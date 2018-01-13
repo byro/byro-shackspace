@@ -130,33 +130,36 @@ def _import_transactions(member_data, member):
 
 
 def import_member(member_data):
-    member = Member.objects.create(
+    member, _ = Member.objects.update_or_create(
         number=member_data['number'],
-        name=member_data['name'],
-        address=member_data['address'],
-        email=member_data['email'],
-    )
-    profile = ShackProfile.objects.create(
+        defaults={
+            'name': member_data['name'],
+            'address': member_data['address'],
+            'email': member_data['email'],
+        })
+    profile, _ = ShackProfile.objects.update_or_create(
         member=member,
-        has_loeffelhardt_account = member_data.get('has_loeffelhardt_account', False),
-        has_matomat_key = member_data.get('has_matomat_key', False),
-        has_metro_card = member_data.get('has_metro_card', False),
-        has_selgros_card = member_data.get('has_selgros_card', False),
-        has_shack_iron_key = member_data.get('has_shack_iron_key', False),
-        has_snackomat_key = member_data.get('has_snackomat_key', False),
-        is_keyholder = member_data.get('is_keyholder', False),
-        signed_DSV = member_data.get('signed_DSV', False),
-        ssh_public_key = member_data.get('ssh_public_key', False),
-    )
+        defaults={
+            'has_loeffelhardt_account': member_data.get('has_loeffelhardt_account', False),
+            'has_matomat_key': member_data.get('has_matomat_key', False),
+            'has_metro_card': member_data.get('has_metro_card', False),
+            'has_selgros_card': member_data.get('has_selgros_card', False),
+            'has_shack_iron_key': member_data.get('has_shack_iron_key', False),
+            'has_snackomat_key': member_data.get('has_snackomat_key', False),
+            'is_keyholder': member_data.get('is_keyholder', False),
+            'signed_DSV': member_data.get('signed_DSV', False),
+            'ssh_public_key': member_data.get('ssh_public_key', False),
+            })
     memberships = member_data.get('memberships')
     last = None
     for membership in sorted(memberships, key=lambda m: m['membership_start']):
-        obj = Membership.objects.create(
+        obj = Membership.objects.update_or_create(
             member=member,
-            start=parse_date(membership['membership_start']),
-            amount=Decimal(membership['membership_fee_monthly'])*membership['membership_fee_interval'],
-            interval=membership['membership_fee_interval'],
-        )
+            defaults={
+                'start': parse_date(membership['membership_start']),
+                'amount': Decimal(membership['membership_fee_monthly'])*membership['membership_fee_interval'],
+                'interval': membership['membership_fee_interval'],
+                })
         if last:
             last.end = obj.start - timedelta(days=1)
             last.save(update_fields=['end'])
