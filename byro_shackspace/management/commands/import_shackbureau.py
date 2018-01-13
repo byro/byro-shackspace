@@ -155,11 +155,11 @@ def import_member(member_data):
     for membership in sorted(memberships, key=lambda m: m['membership_start']):
         obj, _ = Membership.objects.update_or_create(
             member=member,
+            start=parse_date(membership['membership_start']),
             defaults={
-                'start': parse_date(membership['membership_start']),
                 'amount': Decimal(membership['membership_fee_monthly'])*membership['membership_fee_interval'],
                 'interval': membership['membership_fee_interval'],
-                })
+            })
         if last:
             last.end = obj.start - timedelta(days=1)
             last.save(update_fields=['end'])
