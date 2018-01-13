@@ -1,3 +1,4 @@
+import os.path
 import pytest
 from byro_shackspace.utils import process_bank_csv
 from django.core.files.uploadedfile import InMemoryUploadedFile
@@ -7,7 +8,8 @@ from byro.bookkeeping.models import RealTransactionSource
 
 @pytest.fixture
 def bank_transaction_csv_file():
-    actual_file = open('tests/fixtures/transactions.csv', encoding='iso-8859-1')
+    filename = os.path.join(os.path.dirname(__file__), 'fixtures/transactions.csv')
+    actual_file = open(filename, encoding='iso-8859-1')
     f = InMemoryUploadedFile(
         file=actual_file,
         field_name=None,
