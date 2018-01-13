@@ -30,16 +30,15 @@ def process_bank_csv(sender, signal, **kwargs):
             if key.startswith('VWZ'):
                 reference += line[key] + ' '
 
-        RealTransaction.objects.create(
+        RealTransaction.objects.get_or_create(
             channel=TransactionChannel.BANK,
-            booking_datetime=booking_timestamp,
             value_datetime=datetime.strptime(line.get('Buchungstag'), '%d.%m.%Y'),
             amount=Decimal(line.get('Betrag').replace('.', '').replace(',', '.')),
             purpose=reference,
             originator=line.get('Auftraggeber/Empfänger', '<leer>'),
             importer='shack_bank_csv_importer',
-            source=source,
             data=line,
+            defaults={'source': source, 'booking_datetime': booking_timestamp},
         )
     return True
 
