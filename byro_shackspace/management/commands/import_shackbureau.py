@@ -153,7 +153,7 @@ def import_member(member_data):
     memberships = member_data.get('memberships')
     last = None
     for membership in sorted(memberships, key=lambda m: m['membership_start']):
-        obj = Membership.objects.update_or_create(
+        obj, _ = Membership.objects.update_or_create(
             member=member,
             defaults={
                 'start': parse_date(membership['membership_start']),
