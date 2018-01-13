@@ -1,19 +1,22 @@
 import csv
 import re
-from datetime import date, datetime, timedelta
+from datetime import datetime
 from decimal import Decimal
 
-from django.db import transaction
 from django.dispatch import receiver
 from django.utils.timezone import now
 
-from byro.bookkeeping.models import RealTransaction, TransactionChannel
-from byro.bookkeeping.signals import derive_virtual_transactions, process_bank_csv
+from byro.bookkeeping.models import (
+    Account, AccountCategory, RealTransaction,
+    TransactionChannel, VirtualTransaction,
+)
+from byro.bookkeeping.signals import (
+    derive_virtual_transactions, process_csv_upload,
+)
 from byro.members.models import Member
 
 
-@transaction.atomic
-@receiver(process_bank_csv)
+@receiver(process_csv_upload)
 def process_bank_csv(sender, signal, **kwargs):
     source = sender
     reader = csv.DictReader(open(source.source_file.name, encoding='iso-8859-1'), delimiter=';', quotechar='"')
@@ -38,13 +41,13 @@ def process_bank_csv(sender, signal, **kwargs):
             source=source,
             data=line,
         )
+    return True
 
 
-@transaction.atomic
 @receiver(derive_virtual_transactions)
 def match_transaction(sender, signal, **kwargs):
     transaction = sender
-    uid, score = reference_parser(transaction.reference)
+    uid, score = reference_parser(reference=transaction.purpose)
     member = None
     try:
         member = Member.objects.get(number=uid)
@@ -54,8 +57,8 @@ def match_transaction(sender, signal, **kwargs):
     account = Account.objects.get(account_category=AccountCategory.MEMBER_FEES)
     data = {
         'amount': transaction.amount,
-        'destination': account,
-        'value_datetime': value_datetime,
+        'destination_account': account,
+        'value_datetime': transaction.value_datetime,
         'member': member,
     }
     virtual_transaction = VirtualTransaction.objects.filter(**data).first()
@@ -67,7 +70,7 @@ def match_transaction(sender, signal, **kwargs):
     return [virtual_transaction]
 
 
-def reference_parser(self, reference):
+def reference_parser(reference):
     reference = reference.lower()
 
     regexes = (

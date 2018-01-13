@@ -8,8 +8,7 @@ class ShackspacePluginConfig(AppConfig):
         name = 'shackspace'
 
     def ready(self):
-        print('fooooo')
-        from . import utils
+        from . import utils  # noqa
 
 
 default_app_config = 'byro_shackspace.ShackspacePluginConfig'

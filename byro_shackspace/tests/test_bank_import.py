@@ -1,4 +1,5 @@
 import os.path
+
 import pytest
 from byro_shackspace.utils import process_bank_csv
 from django.core.files.uploadedfile import InMemoryUploadedFile
