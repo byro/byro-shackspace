@@ -9,6 +9,7 @@ class PluginConfig(AppConfig):
 
     def ready(self):
         from . import utils  # noqa
+        from . import signals  # noqa
 
 
 default_app_config = 'byro_shackspace.PluginConfig'
