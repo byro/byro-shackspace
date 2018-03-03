@@ -1,10 +1,12 @@
 import csv
+import os.path
 import re
 from datetime import datetime
 from decimal import Decimal
 
 from django.dispatch import receiver
 from django.utils.timezone import now
+from django.conf import settings
 
 from byro.bookkeeping.models import (
     Account, AccountCategory, RealTransaction,
@@ -19,7 +21,8 @@ from byro.members.models import Member
 @receiver(process_csv_upload)
 def process_bank_csv(sender, signal, **kwargs):
     source = sender
-    reader = csv.DictReader(open(source.source_file.name, encoding='iso-8859-1'), delimiter=';', quotechar='"')
+    filename = os.path.join(settings.MEDIA_ROOT, source.source_file.name)
+    reader = csv.DictReader(open(filename, encoding='iso-8859-1'), delimiter=';', quotechar='"')
     booking_timestamp = now()
 
     for line in reader:
